@@ -1,20 +1,11 @@
 var mongoose = require('mongoose')
 
-var Product = mongoose.model('Product')
-var User = mongoode.model('User')
-
 var userSchema = new mongoose.Schema({
-  name: String,
-  createdAt: Date,
-  address: Object,
-  street: String,
-  postcode: String,
-  Town: String,
-  Country: String,
-  Products: [Product.schema],
-  User: [User.schema],
+  name: {type: String, required: true },
+  gender: String,
+  dob: Date,
 })
 
-var Product = mongoose.model('Product', orderSchema)
+var User = mongoose.model('User', userSchema)
 
-module.exports = Product
+module.exports = User
